@@ -1,0 +1,12 @@
+{
+    "name": "Pootis Engage",
+    "friendly_name": "Pootis Engage",
+    "description": "STANDING HERE I REALIZE",
+    "author": "cheez",
+    "version": "0.1.0",
+    "link": "",
+    "id": "00001",
+    "overwrites": false,
+    "requires": [ "char_loader" ],
+    "priority": 0
+}

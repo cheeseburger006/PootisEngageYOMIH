@@ -1,0 +1,1591 @@
+[gd_scene load_steps=112 format=2]
+
+[ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDownKick.gd" type="Script" id=2]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=3]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=4]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downKick/0.png" type="Texture" id=5]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downKick/0_.png" type="Texture" id=6]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/wait/0.png" type="Texture" id=7]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/getup/3.png" type="Texture" id=8]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/wait/0_.png" type="Texture" id=9]
+[ext_resource path="res://characters/stickman/sprites/stickman4.png" type="Texture" id=10]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisChinSmash.gd" type="Script" id=11]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downDrop/1.png" type="Texture" id=12]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/parryLow/0_.png" type="Texture" id=13]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/chinSmash/1.png" type="Texture" id=14]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/chinSmash/3.png" type="Texture" id=15]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/getup/0.png" type="Texture" id=16]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/chinSmash/0.png" type="Texture" id=17]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/chinSmash/2.png" type="Texture" id=18]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/chinSmash/0_.png" type="Texture" id=19]
+[ext_resource path="res://characters/stickman/sprites/stickman8.png" type="Texture" id=20]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downDrop/2.png" type="Texture" id=21]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/sprintForward/0_.png" type="Texture" id=22]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/grabbed/0.png" type="Texture" id=23]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/sprintForward/3.png" type="Texture" id=24]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/sprintForward/0.png" type="Texture" id=25]
+[ext_resource path="res://characters/stickman/sprites/stickman6.png" type="Texture" id=26]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/land/0.png" type="Texture" id=27]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/sprintForward/1.png" type="Texture" id=28]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/burst/0.png" type="Texture" id=29]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/airParry/0.png" type="Texture" id=30]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/grab/0.png" type="Texture" id=31]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/airParry/0_.png" type="Texture" id=32]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/airKnocked/0.png" type="Texture" id=33]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jump/0_.png" type="Texture" id=34]
+[ext_resource path="res://characters/stickman/sprites/stickman7.png" type="Texture" id=35]
+[ext_resource path="res://characters/stickman/sprites/stickman5.png" type="Texture" id=36]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jump/0.png" type="Texture" id=37]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downDrop/0.png" type="Texture" id=38]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisSnipe.gd" type="Script" id=39]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/13.png" type="Texture" id=40]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/6.png" type="Texture" id=41]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/10.png" type="Texture" id=42]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/7.png" type="Texture" id=43]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/8.png" type="Texture" id=44]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/9.png" type="Texture" id=45]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/11.png" type="Texture" id=46]
+[ext_resource path="res://characters/stickman/sprites/stickman32.png" type="Texture" id=47]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/getup/1.png" type="Texture" id=48]
+[ext_resource path="res://characters/stickman/sprites/stickman33.png" type="Texture" id=49]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/12.png" type="Texture" id=50]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/14.png" type="Texture" id=51]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/0.png" type="Texture" id=52]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/1.png" type="Texture" id=53]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/2.png" type="Texture" id=54]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/3.png" type="Texture" id=55]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/4.png" type="Texture" id=56]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/5.png" type="Texture" id=57]
+[ext_resource path="res://ui/ActionSelector/StateIcons/taunt.png" type="Texture" id=58]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/snipe/0_.png" type="Texture" id=59]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/hurtGrounded/0.png" type="Texture" id=60]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDownDrop.gd" type="Script" id=61]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/downDrop/0_.png" type="Texture" id=62]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/getup/4.png" type="Texture" id=63]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/groundKnocked/0.png" type="Texture" id=64]
+[ext_resource path="res://characters/stickman/sprites/stickman61.png" type="Texture" id=65]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/getup/2.png" type="Texture" id=66]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/0.png" type="Texture" id=67]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisBorderStrike.gd" type="Script" id=68]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/2.png" type="Texture" id=69]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/grab/2.png" type="Texture" id=70]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/1.png" type="Texture" id=71]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/4.png" type="Texture" id=72]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/3.png" type="Texture" id=73]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/5.png" type="Texture" id=74]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/6.png" type="Texture" id=75]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/grab/1.png" type="Texture" id=76]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/7.png" type="Texture" id=77]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/8.png" type="Texture" id=78]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/9.png" type="Texture" id=79]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/10.png" type="Texture" id=80]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/11.png" type="Texture" id=81]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisSlide.gd" type="Script" id=82]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/12.png" type="Texture" id=83]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/1.png" type="Texture" id=84]
+[ext_resource path="res://characters/stickman/sprites/stickman1.png" type="Texture" id=85]
+[ext_resource path="res://characters/stickman/sprites/wall_slam.png" type="Texture" id=86]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/0.png" type="Texture" id=87]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/2.png" type="Texture" id=88]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/0_.png" type="Texture" id=89]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/parryLow/0.png" type="Texture" id=90]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/1.png" type="Texture" id=91]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/0.png" type="Texture" id=92]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/5.png" type="Texture" id=93]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/6.png" type="Texture" id=94]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/4.png" type="Texture" id=95]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/3.png" type="Texture" id=96]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/taunt/2.png" type="Texture" id=97]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/roll/0.png" type="Texture" id=98]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/roll/2.png" type="Texture" id=99]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/roll/3.png" type="Texture" id=100]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/roll/1.png" type="Texture" id=101]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/1.png" type="Texture" id=102]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/0.png" type="Texture" id=103]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/2.png" type="Texture" id=104]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/3.png" type="Texture" id=105]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisJackO'Valentine.gd" type="Script" id=106]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/0_.png" type="Texture" id=107]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisTaunt.gd" type="Script" id=108]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "Burst",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "DashBackward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "DashForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 26 ), ExtResource( 35 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "DoubleJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 70 ) ],
+"loop": true,
+"name": "ForwardThrow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 48 ), ExtResource( 66 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 63 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "Getup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ) ],
+"loop": true,
+"name": "Grab",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 23 ) ],
+"loop": true,
+"name": "Grabbed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ) ],
+"loop": true,
+"name": "HurtAerial",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "HurtGroundedHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "HurtGroundedLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "HurtGroundedMid",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "InstantCancel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "JumpBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 64 ) ],
+"loop": true,
+"name": "Knockdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Landing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 47 ) ],
+"loop": true,
+"name": "ParryHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "ParryLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 67 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 67 ), ExtResource( 71 ), ExtResource( 71 ), ExtResource( 69 ), ExtResource( 69 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 72 ), ExtResource( 72 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 74 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 75 ), ExtResource( 77 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 78 ), ExtResource( 79 ), ExtResource( 79 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 80 ), ExtResource( 81 ), ExtResource( 81 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 83 ), ExtResource( 83 ) ],
+"loop": true,
+"name": "PootisBorderStrike",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 14 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "PootisChinSmash",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "PootisDownDrop",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "PootisDownKick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 48 ), ExtResource( 66 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 63 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "PootisGetup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "PootisHurtGrounded",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 103 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 102 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 104 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 105 ), ExtResource( 105 ) ],
+"loop": true,
+"name": "PootisJackO'Valentine",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "PootisJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 64 ) ],
+"loop": true,
+"name": "PootisKnocked",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "PootisLanding",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "PootisParryAir",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "PootisParryLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 87 ), ExtResource( 87 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 84 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ), ExtResource( 88 ) ],
+"loop": true,
+"name": "PootisSlide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 52 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 52 ), ExtResource( 53 ), ExtResource( 53 ), ExtResource( 53 ), ExtResource( 53 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 55 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 56 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 57 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 41 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 45 ), ExtResource( 42 ), ExtResource( 42 ), ExtResource( 46 ), ExtResource( 46 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 50 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 40 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 51 ), ExtResource( 51 ) ],
+"loop": true,
+"name": "PootisSnipe",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "PootisSprintForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 97 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 96 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 95 ), ExtResource( 93 ), ExtResource( 93 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 94 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 92 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ), ExtResource( 90 ) ],
+"loop": true,
+"name": "PootisTaunt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "PootisWait",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 100 ), ExtResource( 99 ), ExtResource( 101 ), ExtResource( 98 ) ],
+"loop": true,
+"name": "RollBackward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 98 ), ExtResource( 101 ), ExtResource( 99 ), ExtResource( 100 ) ],
+"loop": true,
+"name": "RollForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 65 ) ],
+"loop": true,
+"name": "ThrowTech",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 85 ) ],
+"loop": true,
+"name": "Wait",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 86 ) ],
+"loop": true,
+"name": "WallSlam",
+"speed": 5.0
+} ]
+
+[node name="Pootis" instance=ExtResource( 1 )]
+material = SubResource( 1 )
+character_portrait = ExtResource( 9 )
+
+[node name="Sprite" parent="Flip" index="0"]
+material = SubResource( 2 )
+frames = SubResource( 3 )
+animation = "Grab"
+frame = 12
+offset = Vector2( 158, -27 )
+
+[node name="CollisionBox" parent="." index="2"]
+x = 8
+y = -38
+width = 23
+height = 36
+
+[node name="Hurtbox" parent="." index="3"]
+x = 3
+y = -36
+width = 25
+height = 35
+
+[node name="StateMachine" parent="." index="4"]
+z_index = 1000
+
+[node name="Start" parent="StateMachine" index="0"]
+sprite_animation = "PootisWait"
+
+[node name="ParryHigh" parent="StateMachine" index="1"]
+sprite_animation = "PootisParryLow"
+anim_length = 10
+button_texture = ExtResource( 13 )
+interrupt_into_string = "Grounded
+Aerial
+GroundedSpecial"
+
+[node name="ParryLow" parent="StateMachine" index="2"]
+sprite_animation = "PootisParryLow"
+anim_length = 10
+button_texture = ExtResource( 13 )
+interrupt_into_string = "Grounded
+Aerial"
+
+[node name="ParryAir" parent="StateMachine" index="3"]
+sprite_animation = "PootisParryAir"
+anim_length = 10
+button_texture = ExtResource( 32 )
+
+[node name="Wait" parent="StateMachine" index="8"]
+sprite_animation = "PootisWait"
+button_texture = ExtResource( 9 )
+
+[node name="Fall" parent="StateMachine" index="11"]
+sprite_animation = "PootisJump"
+
+[node name="HurtboxState" parent="StateMachine/Knockdown" index="0"]
+x = 12
+y = -15
+width = 44
+height = 15
+
+[node name="DashForward" parent="StateMachine" index="18"]
+sprite_animation = "DashForward"
+anim_length = 16
+title = "Sprint Forward"
+button_texture = ExtResource( 22 )
+change_stance_to = ""
+
+[node name="ChargeDashForward" parent="StateMachine" index="19"]
+title = "Mega Dash Forward"
+button_texture = ExtResource( 22 )
+
+[node name="Jump" parent="StateMachine" index="23"]
+sprite_animation = "PootisJump"
+button_texture = ExtResource( 34 )
+
+[node name="ChargeDash" parent="StateMachine" index="24"]
+sprite_animation = "PootisSprintForward"
+
+[node name="SuperJump" parent="StateMachine" index="25"]
+sprite_animation = "PootisJump"
+
+[node name="DoubleJump" parent="StateMachine" index="26"]
+sprite_animation = "PootisJump"
+
+[node name="ThrowBox" parent="StateMachine/Grab" index="0"]
+width = 30
+
+[node name="Taunt" parent="StateMachine" index="45"]
+fallback_state = "ParryLow"
+sprite_animation = "PootisTaunt"
+anim_length = 35
+show_in_menu = false
+
+[node name="PootisChinSmash" type="Node2D" parent="StateMachine" index="47"]
+script = ExtResource( 11 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisChinSmash"
+anim_length = 15
+title = "Chin Smash"
+type = 1
+button_texture = ExtResource( 19 )
+interrupt_from_string = "Grounded
+GroundedAttack"
+interrupt_into_string = "GroundedAttack
+Jump"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisChinSmash" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 25
+y = -20
+width = 8
+damage = 50
+minimum_damage = 50
+cancellable = false
+hit_height = 2
+dir_y = "-5.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 3
+active_ticks = 4
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/PootisChinSmash" index="1"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 25
+y = -60
+width = 8
+damage = 50
+minimum_damage = 50
+cancellable = false
+hit_height = 2
+dir_y = "-5.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 3
+active_ticks = 2
+
+[node name="Hitbox3" type="Node2D" parent="StateMachine/PootisChinSmash" index="2"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 22
+y = -90
+width = 13
+height = 23
+damage = 50
+minimum_damage = 50
+cancellable = false
+hit_height = 2
+dir_y = "-15.0"
+start_tick = 6
+active_ticks = 3
+
+[node name="PootisDownKick" type="Node2D" parent="StateMachine" index="48"]
+script = ExtResource( 2 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisDownKick"
+anim_length = 12
+enter_force_dir_x = "2.0"
+enter_force_dir_y = "2.0"
+enter_force_speed = "2.0"
+reset_momentum = true
+title = "Down Kick"
+type = 1
+button_texture = ExtResource( 6 )
+air_type = 1
+land_cancel = true
+interrupt_from_string = "AerialAttack
+Aerial"
+interrupt_into_string = "Aerial
+Grounded
+GroundedAttack"
+hit_cancel_into_string = "AerialAttack"
+hit_cancel_exceptions_string = "PootisDownKick"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisDownKick" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 40
+y = -13
+width = 15
+height = 13
+damage = 20
+damage_in_combo = -5
+minimum_damage = 10
+cancellable = false
+hit_height = 0
+dir_y = "1.0"
+knockback = "1.0"
+start_tick = 1
+active_ticks = 12
+
+[node name="PootisSnipe" type="Node2D" parent="StateMachine" index="49"]
+script = ExtResource( 39 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisSnipe"
+anim_length = 52
+reset_momentum = true
+title = "Snipe"
+type = 2
+button_texture = ExtResource( 59 )
+interrupt_from_string = "Grounded
+GroundedAttack"
+hit_cancel_into_string = "Parry
+GroundedSpecial
+Hustle"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisSnipe" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 12
+y = -10
+width = 28
+height = 10
+damage = 20
+minimum_damage = 15
+hitstun_ticks = 31
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+hit_height = 2
+hit_sound = null
+dir_x = "0.5"
+dir_y = "-0.5"
+knockback = "8.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 5
+active_ticks = 15
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/PootisSnipe" index="1"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 11
+y = -28
+width = 16
+height = 10
+damage = 20
+minimum_damage = 15
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+hit_height = 2
+dir_x = "0.5"
+dir_y = "-0.3"
+knockback = "8.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 13
+active_ticks = 7
+
+[node name="Hitbox3" type="Node2D" parent="StateMachine/PootisSnipe" index="2"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 50
+y = -50
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox4" type="Node2D" parent="StateMachine/PootisSnipe" index="3"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 60
+y = -53
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox5" type="Node2D" parent="StateMachine/PootisSnipe" index="4"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 70
+y = -56
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox6" type="Node2D" parent="StateMachine/PootisSnipe" index="5"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 80
+y = -59
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox7" type="Node2D" parent="StateMachine/PootisSnipe" index="6"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 90
+y = -62
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox8" type="Node2D" parent="StateMachine/PootisSnipe" index="7"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 100
+y = -65
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox9" type="Node2D" parent="StateMachine/PootisSnipe" index="8"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 110
+y = -68
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox10" type="Node2D" parent="StateMachine/PootisSnipe" index="9"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 120
+y = -71
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox11" type="Node2D" parent="StateMachine/PootisSnipe" index="10"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 130
+y = -74
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox12" type="Node2D" parent="StateMachine/PootisSnipe" index="11"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 140
+y = -77
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox13" type="Node2D" parent="StateMachine/PootisSnipe" index="12"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 150
+y = -80
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox14" type="Node2D" parent="StateMachine/PootisSnipe" index="13"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 160
+y = -83
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox15" type="Node2D" parent="StateMachine/PootisSnipe" index="14"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 170
+y = -86
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox16" type="Node2D" parent="StateMachine/PootisSnipe" index="15"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 180
+y = -89
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox17" type="Node2D" parent="StateMachine/PootisSnipe" index="16"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 190
+y = -92
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox18" type="Node2D" parent="StateMachine/PootisSnipe" index="17"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 200
+y = -95
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox19" type="Node2D" parent="StateMachine/PootisSnipe" index="18"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 210
+y = -98
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox20" type="Node2D" parent="StateMachine/PootisSnipe" index="19"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 220
+y = -101
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox21" type="Node2D" parent="StateMachine/PootisSnipe" index="20"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 230
+y = -104
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox22" type="Node2D" parent="StateMachine/PootisSnipe" index="21"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 240
+y = -107
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox23" type="Node2D" parent="StateMachine/PootisSnipe" index="22"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 250
+y = -110
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox24" type="Node2D" parent="StateMachine/PootisSnipe" index="23"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 260
+y = -113
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox25" type="Node2D" parent="StateMachine/PootisSnipe" index="24"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 270
+y = -116
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox26" type="Node2D" parent="StateMachine/PootisSnipe" index="25"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 280
+y = -119
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox27" type="Node2D" parent="StateMachine/PootisSnipe" index="26"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 290
+y = -122
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox28" type="Node2D" parent="StateMachine/PootisSnipe" index="27"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 300
+y = -125
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox29" type="Node2D" parent="StateMachine/PootisSnipe" index="28"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 310
+y = -128
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="Hitbox30" type="Node2D" parent="StateMachine/PootisSnipe" index="29"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 320
+y = -131
+width = -8
+height = 6
+damage = 100
+minimum_damage = 100
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "5.0"
+dir_y = "-2.0"
+knockback = "6.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 37
+active_ticks = 2
+
+[node name="PootisDownDrop" type="Node2D" parent="StateMachine" index="50"]
+script = ExtResource( 61 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisDownDrop"
+anim_length = 12
+force_dir_y = "6.0"
+force_speed = "2.0"
+force_tick = 8
+enter_force_dir_x = "2.0"
+enter_force_dir_y = "1.0"
+enter_force_speed = "3.0"
+reset_momentum = true
+title = "Down Drop"
+type = 1
+button_texture = ExtResource( 62 )
+air_type = 1
+interrupt_from_string = "Aerial
+AerialAttack"
+interrupt_into_string = "Aerial
+GroundedAttack"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisDownDrop" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 39
+y = -18
+damage = 40
+minimum_damage = 35
+hitstun_ticks = 15
+hit_height = 0
+dir_x = "0.0"
+dir_y = "1.0"
+start_tick = 9
+active_ticks = 4
+
+[node name="PootisBorderStrike" type="Node2D" parent="StateMachine" index="51"]
+script = ExtResource( 68 )
+sprite_animation = "PootisBorderStrike"
+anim_length = 77
+reset_momentum = true
+title = "Border Strike"
+type = 3
+button_texture = ExtResource( 9 )
+interrupt_from_string = "GroundedSpecial
+Grounded
+GroundedAttack"
+super_level = 3
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisBorderStrike" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -4
+y = 1
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "5.0"
+dir_y = "-3.5"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox2" type="Node2D" parent="StateMachine/PootisBorderStrike" index="1"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -4
+y = -37
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "5.0"
+dir_y = "-3.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox3" type="Node2D" parent="StateMachine/PootisBorderStrike" index="2"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -4
+y = -75
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "5.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox4" type="Node2D" parent="StateMachine/PootisBorderStrike" index="3"]
+z_index = 1000
+script = ExtResource( 3 )
+x = -4
+y = -113
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "5.0"
+dir_y = "0.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox5" type="Node2D" parent="StateMachine/PootisBorderStrike" index="4"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 99
+y = 1
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_y = "-3.5"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox6" type="Node2D" parent="StateMachine/PootisBorderStrike" index="5"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 99
+y = -37
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox7" type="Node2D" parent="StateMachine/PootisBorderStrike" index="6"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 99
+y = -75
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_y = "0.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox8" type="Node2D" parent="StateMachine/PootisBorderStrike" index="7"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 99
+y = -113
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_y = "2.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox9" type="Node2D" parent="StateMachine/PootisBorderStrike" index="8"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 202
+y = 1
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "-5.0"
+dir_y = "-3.5"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox10" type="Node2D" parent="StateMachine/PootisBorderStrike" index="9"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 202
+y = -37
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "-5.0"
+dir_y = "-3.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox11" type="Node2D" parent="StateMachine/PootisBorderStrike" index="10"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 202
+y = -75
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "-5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox12" type="Node2D" parent="StateMachine/PootisBorderStrike" index="11"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 202
+y = -113
+width = 46
+height = 19
+cancellable = false
+hits_otg = true
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+ignore_armor = true
+dir_x = "-5.0"
+dir_y = "0.0"
+knockback = "7.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+
+[node name="Hitbox13" type="Node2D" parent="StateMachine/PootisBorderStrike" index="12"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 145
+y = -65
+width = 94
+damage = 70
+minimum_damage = 70
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 1
+dir_x = "0.5"
+dir_y = "-2.0"
+knockback = "1.5"
+grounded_hit_state = "HurtAerial"
+start_tick = 8
+active_ticks = 2
+
+[node name="Hitbox14" type="Node2D" parent="StateMachine/PootisBorderStrike" index="13"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 145
+y = -40
+width = 94
+height = 36
+damage = 70
+minimum_damage = 70
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 2
+dir_x = "0.5"
+knockback = "4.5"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 25
+active_ticks = 2
+
+[node name="Hitbox15" type="Node2D" parent="StateMachine/PootisBorderStrike" index="14"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 145
+y = -52
+width = 94
+height = 36
+damage = 70
+minimum_damage = 70
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 3
+dir_x = "0.5"
+knockback = "3.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 47
+active_ticks = 2
+
+[node name="Hitbox16" type="Node2D" parent="StateMachine/PootisBorderStrike" index="15"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 147
+y = -70
+width = 94
+height = 29
+damage = 70
+minimum_damage = 70
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 4
+dir_x = "0.5"
+knockback = "3.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+start_tick = 59
+active_ticks = 2
+
+[node name="Hitbox17" type="Node2D" parent="StateMachine/PootisBorderStrike" index="16"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 159
+y = -70
+width = 94
+height = 51
+damage = 100
+minimum_damage = 100
+cancellable = false
+di_modifier = "0.0"
+sdi_modifier = "0.0"
+group = 5
+dir_x = "0.5"
+knockback = "3.0"
+grounded_hit_state = "HurtAerial"
+knockdown = true
+hard_knockdown = true
+wall_slam = true
+start_tick = 71
+active_ticks = 2
+
+[node name="PootisSlide" type="Node2D" parent="StateMachine" index="52"]
+script = ExtResource( 82 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisSlide"
+anim_length = 14
+enter_force_dir_x = "6.0"
+enter_force_speed = "6.0"
+title = "Slide"
+type = 1
+button_texture = ExtResource( 89 )
+interrupt_from_string = "Grounded
+GroundedAttack"
+hit_cancel_into_string = "Grounded"
+interrupt_exceptions_string = "GroundedAttack"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisSlide" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 20
+y = -30
+height = 30
+damage = 60
+minimum_damage = 50
+hit_height = 2
+dir_x = "-1.0"
+knockback = "3.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 1
+active_ticks = 14
+
+[node name="PootisJackO\'Valentine" type="Node2D" parent="StateMachine" index="53"]
+script = ExtResource( 106 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+sprite_animation = "PootisJackO'Valentine"
+anim_length = 19
+title = "Jack-O' Valentine"
+type = 1
+button_texture = ExtResource( 107 )
+interrupt_from_string = "Grounded
+GroundedAttack
+AerialAttack
+"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/PootisJackO\'Valentine" index="0"]
+z_index = 1000
+script = ExtResource( 3 )
+x = 44
+y = -37
+width = 23
+height = 25
+damage = 50
+minimum_damage = 45
+hit_height = 0
+dir_y = "0.0"
+knockback = "7.0"
+start_tick = 11
+active_ticks = 9
+
+[node name="PootisTaunt" type="Node2D" parent="StateMachine" index="54"]
+script = ExtResource( 108 )
+fallback_state = "ParryLow"
+sprite_animation = "PootisTaunt"
+anim_length = 35
+title = "Hustle"
+type = 4
+button_texture = ExtResource( 58 )
+interrupt_from_string = "Grounded
+Aerial
+GroundedSuper
+AerialSuper
+Hustle"
+interrupt_into_string = "Grounded
+Aerial"
