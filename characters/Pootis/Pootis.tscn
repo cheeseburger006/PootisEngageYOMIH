@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDownKick.gd" type="Script" id=2]
@@ -108,6 +108,8 @@
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisJackO'Valentine.gd" type="Script" id=106]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/jack-o' valentine/0_.png" type="Texture" id=107]
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisTaunt.gd" type="Script" id=108]
+[ext_resource path="res://characters/states/Dash.gd" type="Script" id=109]
+[ext_resource path="res://ui/ActionSelector/ActionUIData/DashForwardActionUIData.tscn" type="PackedScene" id=110]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -139,7 +141,7 @@ animations = [ {
 "name": "DashBackward",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 28 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 25 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 24 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ) ],
 "loop": true,
 "name": "DashForward",
 "speed": 5.0
@@ -342,7 +344,7 @@ character_portrait = ExtResource( 9 )
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 2 )
 frames = SubResource( 3 )
-animation = "Grab"
+animation = "DashForward"
 frame = 12
 offset = Vector2( 158, -27 )
 
@@ -369,15 +371,24 @@ sprite_animation = "PootisParryLow"
 anim_length = 10
 button_texture = ExtResource( 13 )
 interrupt_into_string = "Grounded
-Aerial
-GroundedSpecial"
+Hustle
+GroundedIdle"
+interrupt_exceptions_string = "GroundedAttack
+GroundedMovement
+PootisSlideState"
+change_stance_to = "Parry"
 
 [node name="ParryLow" parent="StateMachine" index="2"]
 sprite_animation = "PootisParryLow"
 anim_length = 10
 button_texture = ExtResource( 13 )
 interrupt_into_string = "Grounded
-Aerial"
+Hustle
+GroundedIdle"
+interrupt_exceptions_string = "GroundedAttack
+GroundedMovement
+PootisSlideState"
+change_stance_to = "Parry"
 
 [node name="ParryAir" parent="StateMachine" index="3"]
 sprite_animation = "PootisParryAir"
@@ -387,6 +398,11 @@ button_texture = ExtResource( 32 )
 [node name="Wait" parent="StateMachine" index="8"]
 sprite_animation = "PootisWait"
 button_texture = ExtResource( 9 )
+interrupt_from_string = "GroundedIdle
+Grounded"
+allowed_stances_string = "Normal
+Parry"
+change_stance_to = "Normal"
 
 [node name="Fall" parent="StateMachine" index="11"]
 sprite_animation = "PootisJump"
@@ -399,14 +415,21 @@ height = 15
 
 [node name="DashForward" parent="StateMachine" index="18"]
 sprite_animation = "DashForward"
-anim_length = 16
+anim_length = 17
+loop_animation = true
 title = "Sprint Forward"
 button_texture = ExtResource( 22 )
-change_stance_to = ""
+iasa_at = -1
+interrupt_frames = [ 16 ]
+dynamic_iasa = false
+change_stance_to = "Dashing"
+fric = "0.00"
 
 [node name="ChargeDashForward" parent="StateMachine" index="19"]
 title = "Mega Dash Forward"
 button_texture = ExtResource( 22 )
+iasa_at = 30
+change_stance_to = "Dashing"
 
 [node name="Jump" parent="StateMachine" index="23"]
 sprite_animation = "PootisJump"
@@ -544,11 +567,11 @@ reset_momentum = true
 title = "Snipe"
 type = 2
 button_texture = ExtResource( 59 )
-interrupt_from_string = "Grounded
-GroundedAttack"
+interrupt_from_string = "Grounded"
 hit_cancel_into_string = "Parry
-GroundedSpecial
 Hustle"
+allowed_stances_string = "Parry"
+change_stance_to = "Normal"
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/PootisSnipe" index="0"]
 z_index = 1000
@@ -1524,10 +1547,9 @@ enter_force_speed = "6.0"
 title = "Slide"
 type = 1
 button_texture = ExtResource( 89 )
-interrupt_from_string = "Grounded
-GroundedAttack"
-hit_cancel_into_string = "Grounded"
-interrupt_exceptions_string = "GroundedAttack"
+interrupt_from_string = "Grounded"
+allowed_stances_string = "Dashing"
+change_stance_to = "Normal"
 
 [node name="Hitbox" type="Node2D" parent="StateMachine/PootisSlide" index="0"]
 z_index = 1000
@@ -1537,6 +1559,8 @@ y = -30
 height = 30
 damage = 60
 minimum_damage = 50
+cancellable = false
+hits_vs_dizzy = false
 hit_height = 2
 dir_x = "-1.0"
 knockback = "3.0"
@@ -1544,7 +1568,26 @@ grounded_hit_state = "HurtAerial"
 start_tick = 1
 active_ticks = 14
 
-[node name="PootisJackO\'Valentine" type="Node2D" parent="StateMachine" index="53"]
+[node name="PootisSlideState" type="Node2D" parent="StateMachine" index="53"]
+script = ExtResource( 109 )
+fallback_state = "PootisSlide"
+sprite_animation = "DashForward"
+anim_length = 16
+loop_animation = true
+title = "Slide"
+show_in_menu = false
+type = 1
+data_ui_scene = ExtResource( 110 )
+button_texture = ExtResource( 89 )
+dynamic_iasa = false
+interrupt_from_string = "Grounded"
+interrupt_into_string = "Grounded"
+change_stance_to = "Wait"
+beats_backdash = true
+dash_speed = 12
+fric = "0.00"
+
+[node name="PootisJackO\'Valentine" type="Node2D" parent="StateMachine" index="54"]
 script = ExtResource( 106 )
 apply_forces = true
 apply_fric = true
@@ -1574,7 +1617,7 @@ knockback = "7.0"
 start_tick = 11
 active_ticks = 9
 
-[node name="PootisTaunt" type="Node2D" parent="StateMachine" index="54"]
+[node name="PootisTaunt" type="Node2D" parent="StateMachine" index="55"]
 script = ExtResource( 108 )
 fallback_state = "ParryLow"
 sprite_animation = "PootisTaunt"
@@ -1589,3 +1632,5 @@ AerialSuper
 Hustle"
 interrupt_into_string = "Grounded
 Aerial"
+allowed_stances_string = "Parry"
+change_stance_to = "Normal"
