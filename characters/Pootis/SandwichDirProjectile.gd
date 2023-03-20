@@ -4,3 +4,5 @@ func fizzle1():
 	hit_something = true
 	terminate_hitboxes()
 	hit_something_tick = current_tick
+	loop_animation = false
+	#endless = false
