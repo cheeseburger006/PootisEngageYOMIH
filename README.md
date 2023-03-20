@@ -36,3 +36,23 @@ As a character Pootis has limited close range attacks, keep in mind everything i
 >> #### Sprites Changes
 >>
 >> - Reworked Sprint/Charge Sprint to show entirely the sprinting animation
+>>
+> ## Version 1.0.2
+> Adds a few states and improves projectiles
+>
+> ### Change Log
+>
+>> #### State Changes
+>>
+>> - Wait can now be instantiated after a sprint to cancel it
+>> - Border Strike can now be used again after Snipe
+>>
+>> #### Sprites Changes
+>>
+>> - Updated sandwich animation
+>> - Added a death animation
+>> - Added a few particles for the sandwich
+>>
+>> #### Miscellaneous
+>>
+>> - Updated Border Strike's icon
