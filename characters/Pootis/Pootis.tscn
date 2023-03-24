@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=2]
+[gd_scene load_steps=154 format=2]
 
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDownKick.gd" type="Script" id=2]
@@ -85,7 +85,7 @@
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/12.png" type="Texture" id=83]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/1.png" type="Texture" id=84]
 [ext_resource path="res://characters/stickman/sprites/stickman1.png" type="Texture" id=85]
-[ext_resource path="res://characters/stickman/sprites/wall_slam.png" type="Texture" id=86]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/wallslam/0.png" type="Texture" id=86]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/0.png" type="Texture" id=87]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/2.png" type="Texture" id=88]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/slide/0_.png" type="Texture" id=89]
@@ -112,26 +112,44 @@
 [ext_resource path="res://ui/ActionSelector/ActionUIData/DashForwardActionUIData.tscn" type="PackedScene" id=110]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/thumbnail/thumbnail_texture.tres" type="Texture" id=111]
 [ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/borderStrike/thumbnail/load_thumbnail.gd" type="Script" id=112]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/0.png" type="Texture" id=113]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1.png" type="Texture" id=114]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/4.png" type="Texture" id=115]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/6.png" type="Texture" id=116]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/9.png" type="Texture" id=117]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/5.png" type="Texture" id=118]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/7.png" type="Texture" id=119]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/10.png" type="Texture" id=120]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2.png" type="Texture" id=121]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/3.png" type="Texture" id=122]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/8.png" type="Texture" id=123]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/12.png" type="Texture" id=124]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/13.png" type="Texture" id=125]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/14.png" type="Texture" id=126]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/15.png" type="Texture" id=127]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/11.png" type="Texture" id=128]
-[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDeath.gd" type="Script" id=129]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/0.png" type="Texture" id=113]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/1.png" type="Texture" id=114]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/4.png" type="Texture" id=115]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/6.png" type="Texture" id=116]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/9.png" type="Texture" id=117]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/5.png" type="Texture" id=118]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/7.png" type="Texture" id=119]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/10.png" type="Texture" id=120]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/2.png" type="Texture" id=121]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/3.png" type="Texture" id=122]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/8.png" type="Texture" id=123]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/12.png" type="Texture" id=124]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/13.png" type="Texture" id=125]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/14.png" type="Texture" id=126]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/15.png" type="Texture" id=127]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/11.png" type="Texture" id=128]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDeath1.gd" type="Script" id=129]
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisIdle.gd" type="Script" id=130]
 [ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisHurtAerial.gd" type="Script" id=131]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/16.png" type="Texture" id=132]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/16.png" type="Texture" id=132]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Pootis.gd" type="Script" id=133]
+[ext_resource path="res://Pootis Mod/characters/Pootis/States/PootisDeath2.gd" type="Script" id=134]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/0.png" type="Texture" id=135]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/1.png" type="Texture" id=136]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/2.png" type="Texture" id=137]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/grab/1_reverse.png" type="Texture" id=138]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/3.png" type="Texture" id=139]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/8.png" type="Texture" id=140]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/11.png" type="Texture" id=141]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/7.png" type="Texture" id=142]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/10.png" type="Texture" id=143]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/9.png" type="Texture" id=144]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/12.png" type="Texture" id=145]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/4.png" type="Texture" id=146]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/6.png" type="Texture" id=147]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/2/5.png" type="Texture" id=148]
+[ext_resource path="res://Pootis Mod/characters/Pootis/PootisGrab.gd" type="Script" id=149]
+[ext_resource path="res://Pootis Mod/characters/Pootis/PootisHold.gd" type="Script" id=150]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -183,7 +201,7 @@ animations = [ {
 "name": "Getup",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ), ExtResource( 76 ) ],
+"frames": [ ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 31 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ), ExtResource( 138 ) ],
 "loop": true,
 "name": "Grab",
 "speed": 60.0
@@ -260,7 +278,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 113 ), ExtResource( 113 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 114 ), ExtResource( 114 ), ExtResource( 121 ), ExtResource( 121 ), ExtResource( 121 ), ExtResource( 122 ), ExtResource( 122 ), ExtResource( 122 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 115 ), ExtResource( 118 ), ExtResource( 118 ), ExtResource( 118 ), ExtResource( 118 ), ExtResource( 118 ), ExtResource( 116 ), ExtResource( 116 ), ExtResource( 116 ), ExtResource( 116 ), ExtResource( 116 ), ExtResource( 119 ), ExtResource( 119 ), ExtResource( 119 ), ExtResource( 119 ), ExtResource( 119 ), ExtResource( 123 ), ExtResource( 123 ), ExtResource( 123 ), ExtResource( 123 ), ExtResource( 123 ), ExtResource( 117 ), ExtResource( 117 ), ExtResource( 117 ), ExtResource( 117 ), ExtResource( 117 ), ExtResource( 120 ), ExtResource( 120 ), ExtResource( 120 ), ExtResource( 120 ), ExtResource( 120 ), ExtResource( 128 ), ExtResource( 128 ), ExtResource( 128 ), ExtResource( 128 ), ExtResource( 128 ), ExtResource( 124 ), ExtResource( 124 ), ExtResource( 124 ), ExtResource( 124 ), ExtResource( 124 ), ExtResource( 125 ), ExtResource( 125 ), ExtResource( 126 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 127 ), ExtResource( 132 ) ],
 "loop": true,
-"name": "PootisDeath",
+"name": "PootisDeath1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 135 ), ExtResource( 135 ), ExtResource( 135 ), ExtResource( 135 ), ExtResource( 135 ), ExtResource( 136 ), ExtResource( 136 ), ExtResource( 136 ), ExtResource( 136 ), ExtResource( 136 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 137 ), ExtResource( 139 ), ExtResource( 139 ), ExtResource( 139 ), ExtResource( 146 ), ExtResource( 146 ), ExtResource( 146 ), ExtResource( 148 ), ExtResource( 148 ), ExtResource( 148 ), ExtResource( 148 ), ExtResource( 148 ), ExtResource( 147 ), ExtResource( 147 ), ExtResource( 147 ), ExtResource( 147 ), ExtResource( 147 ), ExtResource( 142 ), ExtResource( 142 ), ExtResource( 142 ), ExtResource( 142 ), ExtResource( 142 ), ExtResource( 140 ), ExtResource( 140 ), ExtResource( 140 ), ExtResource( 140 ), ExtResource( 140 ), ExtResource( 144 ), ExtResource( 144 ), ExtResource( 144 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 143 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 141 ), ExtResource( 145 ), ExtResource( 145 ), ExtResource( 145 ), ExtResource( 145 ), ExtResource( 145 ) ],
+"loop": true,
+"name": "PootisDeath2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 38 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ), ExtResource( 21 ) ],
@@ -366,13 +389,13 @@ animations = [ {
 
 [node name="Pootis" instance=ExtResource( 1 )]
 material = SubResource( 1 )
+script = ExtResource( 133 )
 character_portrait = ExtResource( 9 )
 
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 2 )
 frames = SubResource( 3 )
-animation = "PootisDeath"
-frame = 62
+animation = "Grab"
 offset = Vector2( 158, -27 )
 
 [node name="CollisionBox" parent="." index="2"]
@@ -432,6 +455,7 @@ script = ExtResource( 130 )
 sprite_animation = "PootisWait"
 button_texture = ExtResource( 9 )
 interruptible_on_opponent_turn = false
+dynamic_iasa = false
 interrupt_from_string = "GroundedIdle
 Grounded"
 interrupt_into_string = "Grounded
@@ -445,6 +469,12 @@ change_stance_to = "Normal"
 sprite_animation = "PootisJump"
 
 [node name="HurtboxState" parent="StateMachine/Knockdown" index="0"]
+x = 12
+y = -15
+width = 44
+height = 15
+
+[node name="HurtboxState" parent="StateMachine/HardKnockdown" index="0"]
 x = 12
 y = -15
 width = 44
@@ -485,8 +515,76 @@ sprite_animation = "PootisJump"
 script = ExtResource( 131 )
 change_stance_to = ""
 
+[node name="Hold" parent="StateMachine" index="35"]
+script = ExtResource( 150 )
+fallback_state = "BackThrow"
+start_throw_pos_x = 38
+start_throw_pos_y = -64
+release_throw_pos_x = -18
+release_throw_pos_y = -111
+
+[node name="AirHold" parent="StateMachine" index="36"]
+script = ExtResource( 150 )
+fallback_state = "AirBackThrow"
+start_throw_pos_x = 38
+start_throw_pos_y = -64
+release_throw_pos_x = -18
+release_throw_pos_y = -111
+
+[node name="Grab" parent="StateMachine" index="37"]
+script = ExtResource( 149 )
+
 [node name="ThrowBox" parent="StateMachine/Grab" index="0"]
-width = 30
+x = 10
+y = -20
+width = 37
+height = 20
+hits_vs_aerial = true
+start_tick = 1
+active_ticks = 12
+
+[node name="AirGrab" parent="StateMachine" index="38"]
+script = ExtResource( 149 )
+allowed_stances_string = "Normal"
+
+[node name="ThrowBox" parent="StateMachine/AirGrab" index="0"]
+x = 10
+y = -20
+width = 37
+height = 20
+start_tick = 1
+active_ticks = 12
+
+[node name="ForwardThrow" parent="StateMachine" index="39"]
+show_in_menu = false
+
+[node name="BackThrow" parent="StateMachine" index="40"]
+start_throw_pos_x = -18
+start_throw_pos_y = -111
+release_throw_pos_x = 25
+release_throw_pos_y = -38
+knockback = "5.0"
+dir_y = "1.0"
+knockdown = false
+
+[node name="AirForwardThrow" parent="StateMachine" index="41"]
+anim_length = 15
+show_in_menu = false
+
+[node name="AirBackThrow" parent="StateMachine" index="42"]
+anim_length = 15
+start_throw_pos_x = -18
+start_throw_pos_y = -111
+release_throw_pos_x = 25
+release_throw_pos_y = -38
+
+[node name="AirDownThrow" parent="StateMachine" index="43"]
+anim_length = 15
+flip_frame = 0
+start_throw_pos_x = -18
+start_throw_pos_y = -111
+release_throw_pos_x = 25
+release_throw_pos_y = -38
 
 [node name="Taunt" parent="StateMachine" index="45"]
 fallback_state = "ParryLow"
@@ -1683,20 +1781,21 @@ Aerial"
 allowed_stances_string = "Parry"
 change_stance_to = "Normal"
 
-[node name="PootisDeath" type="Node2D" parent="StateMachine" index="56"]
+[node name="PootisDeath1" type="Node2D" parent="StateMachine" index="56"]
 script = ExtResource( 129 )
-sprite_animation = "PootisDeath"
+sprite_animation = "PootisDeath1"
 anim_length = 64
 show_in_menu = false
 interrupt_into_string = "OTG"
 
-[node name="Node2D2" type="Node2D" parent="StateMachine/PootisDeath" index="0"]
-z_index = 1000
-script = ExtResource( 3 )
-x = 9
-y = -82
-width = 1
-height = 1
+[node name="PootisDeath2" type="Node2D" parent="StateMachine" index="57"]
+script = ExtResource( 134 )
+sprite_animation = "PootisDeath2"
+anim_length = 61
+show_in_menu = false
 
 [node name="LoadBorderStrikeThumbnail" type="Node2D" parent="." index="11"]
 script = ExtResource( 112 )
+
+[connection signal="throwbox_position_changed" from="StateMachine/Grab" to="StateMachine/Hold" method="_on_Grab_throwbox_position_changed"]
+[connection signal="throwbox_position_changed" from="StateMachine/AirGrab" to="StateMachine/AirHold" method="_on_AirGrab_throwbox_position_changed"]
