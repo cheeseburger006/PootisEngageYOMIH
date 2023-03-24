@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/projectiles/projectile4_00.png" type="Texture" id=2]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Sprites/death/1/projectiles/projectile4_00.png" type="Texture" id=2]
 [ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=3]
 [ext_resource path="res://Pootis Mod/characters/Pootis/DeathProjectile.gd" type="Script" id=4]
+[ext_resource path="res://Pootis Mod/characters/Pootis/Projectiles/DeathProjectiles/particles/DeathProjectilesParticleEffect.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -22,12 +23,25 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 3 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
 [node name="BaseProjectile" instance=ExtResource( 1 )]
 material = SubResource( 1 )
 fizzle_on_ceiling = false
 
 [node name="Sprite" parent="Flip" index="0"]
 frames = SubResource( 2 )
+
+[node name="ParticleEffect" parent="Flip/Particles" index="0" instance=ExtResource( 5 )]
+material = SubResource( 3 )
+scale = Vector2( 1.787, 1.919 )
 
 [node name="Default" parent="StateMachine" index="0"]
 script = ExtResource( 4 )
