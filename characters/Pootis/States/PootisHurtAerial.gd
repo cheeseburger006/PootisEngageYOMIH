@@ -54,7 +54,14 @@ func _tick():
 					return "Knockdown"
 					
 			elif host.hp == 0:
-				return "PootisDeath"
+				var rng = RandomNumberGenerator.new()
+				rng.randomize()
+				var deathIndex = rng.randi_range(0, 1)
+				
+				if(deathIndex == 0):
+					return "PootisDeath1"
+				else:
+					return "PootisDeath2"
 				
 			else :
 				if host.hp > 0:
