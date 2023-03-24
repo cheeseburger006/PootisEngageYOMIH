@@ -38,6 +38,7 @@ As a character Pootis has limited close range attacks, keep in mind everything i
 >> - Reworked Sprint/Charge Sprint to show entirely the sprinting animation
 >>
 > ## Version 1.0.2
+>
 > Adds a few states and improves projectiles
 >
 > ### Change Log
@@ -56,3 +57,28 @@ As a character Pootis has limited close range attacks, keep in mind everything i
 >> #### Miscellaneous
 >>
 >> - Updated Border Strike's icon
+>>
+> ## Version 1.0.3
+>
+> Adds and modifies a buch of stuff, mainly grab states
+>
+> ### Change Log
+>
+>> #### System Changes
+>>
+>> - The mod has been resized by deleting a few useless files and decresing some images' quality
+>>
+>> #### States Changes
+>>
+>> - Forward throws will no longer be usable
+>> - Changed grab opponent's positions
+>>
+>> #### Sprites Changes
+>>
+>> - Added a second death animation wich will be randomly shown together with the first one
+>> - Added a wallslam sprite
+>> - Added a few particles for the first death projectiles
+>>
+>> #### Bug fixes
+>>
+>> - AirGrab now grabs
